@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Complaint Tracker</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+<div class="top-bar">
+    <a href="admin.html" class="admin-login-link">🔐 Admin Login</a>
+</div>
+       <h1>Complaint Tracker</h1>
+        <p class="subtitle">Submit and track your college complaints</p>
+        <form id="complaintForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="Email" placeholder="Enter your email" required>
+            
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="Wi Fi">Wi Fi</option>
+                <option value="Classroom">Classroom</option>
+                <option value="Laboratory">Laboratory</option>
+                <option value="Library">Library</option>
+                <option value="Cleanliness">Cleanliness</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="description">Complaint Description</label>
+            <textarea id="description"
+                       placeholder="Describe your complaint"
+                       rows="5"
+                       required></textarea>
+            <button type="submit">Submit Complaint</button>
+        </form>
+        <h2>Submitted Complaints</h2>
+        <div class="table-container">
+        <table id="complaintsTable">
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="complaintsTableBody">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
