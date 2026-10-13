@@ -1,6 +1,7 @@
 package com.complainttracker.complainttracker.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +14,7 @@ public class Admin {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String email;
+	@Column(length = 100)
 	private String password;
 	public Admin() {
 	}
